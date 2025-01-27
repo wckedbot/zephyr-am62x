@@ -17,7 +17,7 @@
  */
 struct ti_sci_xfer {
 	struct mbox_msg tx_message;
-	u8 rx_len;
+	uint8_t rx_len;
 };
 
 /**
@@ -32,8 +32,8 @@ struct ti_sci_xfer {
  *	type is not being changed for AM654 SoC.
  */
 struct ti_sci_rm_type_map {
-	u32 dev_id;
-	u16 type;
+	uint32_t dev_id;
+	uint16_t type;
 };
 
 /**
@@ -45,7 +45,7 @@ struct ti_sci_rm_type_map {
  * @max_msg_size: Maximum size of data per message that can be handled.
  */
 struct ti_sci_desc {
-	u8 default_host_id;
+	uint16_t default_host_id;
 	int max_rx_timeout_ms;
 	int max_msgs;
 	int max_msg_size;
@@ -75,6 +75,6 @@ struct ti_sci_info {
 	struct list_head list;
 	struct list_head dev_list;
 	bool is_secure;
-	u8 host_id;
-	u8 seq;
+	uint16_t host_id;
+	uint16_t seq;
 };

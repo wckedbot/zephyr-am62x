@@ -1,0 +1,6 @@
+config MBOX_TI_SEC_PROXY
+	bool "TI Secureproxy Mailbox driver"
+	depends on DT_HAS_TI_SEC_PROXY_ENABLED
+	default y
+	help
+	  Driver for TI Secure Proxy Mailbox.

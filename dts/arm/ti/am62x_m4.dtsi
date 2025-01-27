@@ -48,6 +48,17 @@
 		#mbox-cells = <1>;
 	};
 
+	secure_proxy_main: mailbox0@4d000000 {
+		compatible = "ti,am62x-sec-proxy";
+		reg-names = "target_data", "rt", "scfg";
+		reg = <0x4d000000 0x80000>,
+			<0x4a600000 0x80000>,
+			<0x4a400000 0x80000>;
+		interrupts = <2 4>;
+		interrupt-parent = <&nvic>;
+		#mbox-cells = <1>;
+	};
+
 	pinctrl: pinctrl@4084000 {
 		compatible = "ti,k3-pinctrl";
 		reg = <0x04084000 0x88>;

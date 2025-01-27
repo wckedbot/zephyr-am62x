@@ -10,6 +10,7 @@
 #include <zephyr/spinlock.h>
 #define LOG_LEVEL CONFIG_MBOX_LOG_LEVEL
 #include <zephyr/logging/log.h>
+#include <mbox.h>
 LOG_MODULE_REGISTER(ti_omap_mailbox);
 
 #define DT_DRV_COMPAT ti_omap_mailbox
